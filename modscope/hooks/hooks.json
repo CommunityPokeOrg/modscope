@@ -1,0 +1,4 @@
+{
+  "description": "modscope: mod debugging hooks — tracer, registry, command, pane",
+  "modules": ["./register.ts"]
+}

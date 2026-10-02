@@ -1,0 +1,4 @@
+{
+  "description": "modscope-bisect: managed-seat bisection hook",
+  "modules": ["./register.ts"]
+}

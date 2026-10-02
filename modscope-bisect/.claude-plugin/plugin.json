@@ -1,0 +1,22 @@
+{
+  "name": "modscope-bisect",
+  "version": "0.1.0",
+  "description": "Companion to modscope: skips user-tier mods via next.to for bisection. Requires seating in prependPlugins (or appendPlugins). Disabled unless 'enabled' is set.",
+  "author": { "name": "CommunityPokeOrg" },
+  "license": "MIT",
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "Bypass mods",
+      "description": "When true and this plugin is seated via prependPlugins, every event jumps past user (and append) mods to 'builtin'; target 'core' skips builtin too.",
+      "default": false
+    },
+    "target": {
+      "type": "string",
+      "title": "Jump target tier",
+      "description": "'builtin' keeps built-in mods (e.g. sec-default) active; 'core' skips every mod beneath. Append-seated installs may only target 'core'.",
+      "default": "builtin",
+      "options": ["builtin", "core"]
+    }
+  }
+}

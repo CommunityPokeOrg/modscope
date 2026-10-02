@@ -1,0 +1,18 @@
+{
+  "name": "communitypoke",
+  "owner": {
+    "name": "CommunityPokeOrg"
+  },
+  "plugins": [
+    {
+      "name": "modscope",
+      "source": "./modscope",
+      "description": "A mod for debugging other mods: load-order registry, per-event mod attribution, error capture, logs, watch pane, and replay export."
+    },
+    {
+      "name": "modscope-bisect",
+      "source": "./modscope-bisect",
+      "description": "Optional companion: bisects mods by jumping events past user-tier mods via next.to. Requires prependPlugins/appendPlugins seating and 'enabled'."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": [],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "claude-code": ["./vendor/claude-code.d.ts"],
+      "claude-code/testing": ["./vendor/claude-code.d.ts"]
+    }
+  },
+  "include": ["vendor/claude-code.d.ts", "modscope/hooks/**/*.ts", "modscope-bisect/hooks/**/*.ts", "modscope/tests/**/*.ts"]
+}

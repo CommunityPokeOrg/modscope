@@ -1,0 +1,39 @@
+{
+  "name": "modscope",
+  "version": "0.1.0",
+  "description": "A mod for debugging other mods: load-order registry, per-event mod attribution, error capture, bypass/bisect, and replay export.",
+  "author": {
+    "name": "CommunityPokeOrg"
+  },
+  "license": "MIT",
+  "keywords": ["debug", "mods", "hooks", "tracing"],
+  "userConfig": {
+    "trace_max": {
+      "type": "number",
+      "title": "Trace depth",
+      "description": "How many recent dispatches the in-memory trace ring keeps.",
+      "default": 150,
+      "min": 10,
+      "max": 5000
+    },
+    "trace_api_calls": {
+      "type": "boolean",
+      "title": "Trace $ API calls",
+      "description": "Also trace noisy $ op calls (fs, store, env, model, clock, ...). Toggle at runtime with '/modscope verbose'.",
+      "default": false
+    },
+    "redact": {
+      "type": "boolean",
+      "title": "Redact secrets",
+      "description": "Mask token/secret-looking keys and token-shaped strings in recorded payloads.",
+      "default": true
+    },
+    "blocklist": {
+      "type": "string",
+      "title": "Blocked mods",
+      "description": "Mod names refused at plugin.register (user tier only). Also managed at runtime via '/modscope block'.",
+      "multiple": true,
+      "default": []
+    }
+  }
+}
